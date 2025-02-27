@@ -2,7 +2,8 @@
 ### SQL data analysis project  
 This project uses World Health Statistics data from [World Health Organization website](https://www.who.int/data/gho/publications/world-health-statistics/).  
 It also uses a github dataset that maps countries to regions: [Dataset](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv)  
-Some simple query to find an average percent of overweight children was executed: ![Image](images/OverweightChildren.png?raw=true)
+
+First some simple query to find an average percent of overweight children was executed: ![Image](images/OverweightChildren.png?raw=true)
 We can see that Americas have the highest percentage of overweight children.  
 Next we've analyzed how the obesity rates change with age: ![Image](images/ObesityChangeWithAge.png?raw=true)  
 We can see that with the exception of Western Pacific Region, the rank of the region in regards to obesity rates remains the same in different age groups.  
