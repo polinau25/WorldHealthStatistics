@@ -43,7 +43,7 @@ WHERE hs.IND_NAME = 'Healthy life expectancy at birth (years)'
 GROUP BY hs.DIM_GEO_NAME
 ORDER BY hs.DIM_GEO_NAME;
 ```
-![Image](images/MenVsWomenLifeExpectancy.png?raw=true) 
+![Image](images/MenVsWomenLifeExpectancy.png?raw=true)  
 It is known that women on average live longer and the data proves it in majority of the countries.  
 
 Next some queries were performed to investigate validity of the data and compare region level data averages from original dataset with similar averages when region average is done using a helper mapping dataset (country to region mapping).  
@@ -72,7 +72,7 @@ ORDER BY average DESC;
 We can see that there is not a perfect match between regional data in WHO table compared to averaging based on country to region mapping.
 For Africa, numbers are close: 64.46 compared to 64.89.
 For Europe, 77.9 compared to 79.32.
-There might be some discrepancies though as to which country is mapped to what region.
+There might be some discrepancies though as to which country is mapped to what region.  
 
 Next we used window functions to show country rankings for a subset of healthcare quality indicators:
 ```sql
