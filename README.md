@@ -13,9 +13,9 @@ AND hs.DIM_GEO_NAME LIKE '%region%'
 ORDER BY hs.VALUE_NUMERIC DESC;
 ```
 ![Image](images/OverweightChildren.png?raw=true)  
-We can see that Americas have the highest percentage of overweight children.  
+We can see that the Americas have the highest percentage of overweight children.  
 
-Next we've analyzed how the obesity rates change with age: 
+Next the obesity rate change with age was analyzed: 
 ```sql
 SELECT 
 	hs.DIM_GEO_NAME,
@@ -33,7 +33,7 @@ ORDER BY Under_5 DESC;
 ![Image](images/ObesityChangeWithAge.png?raw=true)  
 We can see that with the exception of Western Pacific Region, the rank of the region in regards to obesity rates remains the same in different age groups.  
 
-Next we created a query to compare male vs female life expectancy:  
+Next, a query was designed to compare life expectancy between males and females:  
 ```sql
 SELECT 
 	hs.DIM_GEO_NAME,
@@ -75,7 +75,7 @@ For Africa, numbers are close: 64.46 compared to 64.89.
 For Europe, 77.9 compared to 79.32.
 There might be some discrepancies though as to which country is mapped to what region.  
 
-Next we used window functions to show country rankings for a subset of healthcare quality indicators:
+Next, window functions were used to show country rankings for a subset of healthcare quality indicators:
 ```sql
 SELECT hs.IND_NAME, hs.DIM_GEO_NAME, RANK() OVER(PARTITION BY hs.IND_NAME ORDER BY hs.VALUE_NUMERIC DESC) as country_ranking
 FROM who.health_statistics as hs
